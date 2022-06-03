@@ -3,7 +3,9 @@ import { Twist } from '../components/twist/index'
 
 const Home: NextPage = () => {
   return (
-    <Twist />
+    <>
+      <Twist />
+    </>
   )
 }
 

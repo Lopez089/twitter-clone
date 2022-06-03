@@ -1,5 +1,5 @@
 export const Twist = () => {
-    return (
-        <p>hola</p>
-    )
+  return (
+    <p>hola</p>
+  )
 }
