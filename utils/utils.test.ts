@@ -1,4 +1,4 @@
-import { userInitials } from './utils'
+import { userInitials, timeAgo } from './utils'
 
 describe('function userInicial', () => {
   test('receive a username of one words and return an initial', () => {
@@ -41,3 +41,9 @@ describe('function userInicial', () => {
     expect(inicial).toBe('J')
   })
 })
+
+// describe('timeAgo', () => {
+//   test('timeAgo', () => {
+//     console.log('timeAGo', timeAgo())
+//   })
+// })

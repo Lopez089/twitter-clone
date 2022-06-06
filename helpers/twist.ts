@@ -7,8 +7,12 @@ export const twistFaker: twist = {
   id: 2342123131,
   date: 'Sat Jun 04 2022 08:25:26',
   twist: 'Oh so you know binary? Name every symbol then',
-  answers: 5,
-  retweets: true,
+  answersNumber: 5,
+  retweets: 20,
+  isRetweets: false,
   isLike: false,
   like: 57
 }
+
+export const twistFakerIsRetweets = { ...twistFaker, isRetweets: true }
+export const twistFakerIsLike = { ...twistFaker, isLike: true }

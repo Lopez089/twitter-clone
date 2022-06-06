@@ -5,10 +5,11 @@ export interface twist {
     id: number,
     date: string,
     twist: string,
-    answers: number,
-    retweets: boolean,
+    answersNumber: number,
+    retweets: number,
+    isRetweets: boolean
     isLike: boolean,
     like: number,
 }
 
-export type avatar = Omit<twist, 'userAlias', 'id', 'date', 'twist', 'answers', 'retweets', 'isLike', 'like'>
+export type avatar = Omit<twist, 'userAlias', 'id', 'date', 'twist', 'answersNumber', 'retweets', 'isRetweets', 'isLike', 'like'>
