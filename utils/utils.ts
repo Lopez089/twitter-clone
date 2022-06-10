@@ -1,4 +1,4 @@
-import { DateTime, Interval } from 'luxon'
+import { DATE_UNITS } from '../constants/constants'
 
 export const userInitials = (userName: string): string => {
   const separateWord: string[] = userName.split(' ')
@@ -14,13 +14,23 @@ export const userInitials = (userName: string): string => {
   return userName[0].toUpperCase()
 }
 
-// export const timeAgo = (): string | null => {
-//   const now = DateTime.now()
-//   const later = DateTime.local(2021, 1, 30)
-//   const i = Interval.fromDateTimes(later, now)
-//   console.log(i.length('days'))
-//   const interval = DateTime.now().setLocale('es').plus({ days: -(i.length()) }).toRelativeCalendar()
-//   return interval
-// }
+export const getSecondsDiff = (timestamp: number) => (Date.now() - timestamp) / 1000
 
-// // const dateFormat
+const getUnitAndValueDate = (secondsElapsed: number): { value: number, unit: string } | undefined => {
+  for (const [unit, secondsInUnit] of Object.entries(DATE_UNITS)) {
+    if (secondsElapsed >= secondsInUnit || unit === 'second') {
+      const value = Math.floor(secondsElapsed / secondsInUnit) * -1
+      return { value, unit }
+    }
+  }
+}
+
+export const getTimeAgo = (timestamp: number): string | null => {
+  const rtf = new Intl.RelativeTimeFormat('es', {
+    style: 'narrow'
+  })
+
+  const secondsElapsed: number = getSecondsDiff(timestamp)
+  const { value, unit } = getUnitAndValueDate(secondsElapsed)
+  return rtf.format(value, unit)
+}
