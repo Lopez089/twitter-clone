@@ -1,5 +1,5 @@
 import { twist, avatar } from '../../interface/twit'
-import { userInitials } from '../../utils/utils'
+import { userInitials, getTimeAgo } from '../../utils/utils'
 import { AiOutlineRetweet, AiOutlineHeart } from 'react-icons/ai'
 import { IconContext } from 'react-icons'
 import { IoChatbubbleOutline } from 'react-icons/io5'
@@ -40,7 +40,7 @@ export const Twist = ({
           <p className='font-semibold'>{userName}</p>
           <p className='font-light text-gray-400'>{userAlias}</p>
           <p className='font-light text-gray-400'>·</p>
-          <p className='font-light text-gray-400'>{date}</p>
+          <p className='font-light text-gray-400'>{getTimeAgo(date)}</p>
         </div>
         <div>
           <p className='font-light'>

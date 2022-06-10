@@ -10,7 +10,7 @@ const Home: NextPage = () => {
         userName={twistFaker.userName}
         userAlias={twistFaker.userAlias}
         id={twistFaker.id}
-        date={'5h'}
+        date={twistFaker.date}
         twist={twistFaker.twist}
         answersNumber={twistFaker.answersNumber}
         retweets={twistFaker.retweets}
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
         userName={'Juan Lopez'}
         userAlias={twistFaker.userAlias}
         id={twistFaker.id}
-        date={'3d'}
+        date={twistFaker.date}
         twist={twistFaker.twist}
         answersNumber={twistFaker.answersNumber}
         retweets={twistFaker.retweets}

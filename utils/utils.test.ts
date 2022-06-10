@@ -43,9 +43,6 @@ describe('function userInicial', () => {
 })
 
 describe('timeAgo', () => {
-  // TODO:
-  // hace 2 años
-
   test('receive timestamp to 3s and return hace 3 s', () => {
     const dateNow: number = Date.now()
     const timeShow: number = 3

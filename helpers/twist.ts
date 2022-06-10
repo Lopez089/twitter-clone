@@ -5,7 +5,7 @@ export const twistFaker: twist = {
   userName: 'ThePrimeagen',
   userAlias: '@ThePrimeagen',
   id: 2342123131,
-  date: 'Sat Jun 04 2022 08:25:26',
+  date: 1592670738834,
   twist: 'Oh so you know binary? Name every symbol then',
   answersNumber: 5,
   retweets: 20,

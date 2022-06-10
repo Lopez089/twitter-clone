@@ -3,7 +3,7 @@ export interface twist {
     userName: string,
     userAlias: string,
     id: number,
-    date: string,
+    date: number,
     twist: string,
     answersNumber: number,
     retweets: number,
