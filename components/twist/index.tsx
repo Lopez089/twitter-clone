@@ -4,7 +4,7 @@ import { AiOutlineRetweet, AiOutlineHeart } from 'react-icons/ai'
 import { IconContext } from 'react-icons'
 import { IoChatbubbleOutline } from 'react-icons/io5'
 
-export const Avatar = ({ avatar, userName }: avatar) => {
+export const Avatar = ({ avatar, userName }: { avatar: avatar, userName: string }) => {
   return (
     avatar
       ? <img
@@ -31,7 +31,7 @@ export const Twist = ({
   like
 }: twist) => {
   return (
-    <article className='border-2 border-gray-300s rounded p-5 flex max-w-lg'>
+    <article role='twits' className='border-2 border-gray-300s rounded p-5 flex max-w-lg'>
       <section className='mr-2' >
         <Avatar avatar={avatar} userName={userName} />
       </section >

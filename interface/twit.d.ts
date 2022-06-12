@@ -12,4 +12,8 @@ export interface twist {
     like: number,
 }
 
+export interface twists {
+    twists: twist[]
+}
+
 export type avatar = Omit<twist, 'userAlias', 'id', 'date', 'twist', 'answersNumber', 'retweets', 'isRetweets', 'isLike', 'like'>
